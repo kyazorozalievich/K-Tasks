@@ -1,0 +1,28 @@
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 200px;
+  button {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: 0.3s;
+    span {
+      font-size: 20px;
+    }
+    &:hover {
+      background: black;
+      color: white;
+      transform: scale(1.05);
+    }
+  }
+}

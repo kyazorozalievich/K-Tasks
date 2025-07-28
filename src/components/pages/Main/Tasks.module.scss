@@ -1,0 +1,151 @@
+.Tasks {
+  margin-block: 50px;
+  .content {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      h1 {
+        font-size: clamp(1.125rem, 0.8641rem + 1.3043vw, 1.875rem);
+      }
+    }
+    .levels {
+      width: 100%;
+      height: 60px;
+      padding-inline: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 20px;
+      border: 1px solid rgba(128, 128, 128, 0.374);
+      border-radius: 10px;
+      background: rgba(193, 192, 192, 0.105);
+      button {
+        width: 100px;
+        height: 30px;
+        border-radius: 50px;
+        border: 1px solid rgba(128, 128, 128, 0.374);
+        font-weight: 600;
+        transition: 0.3s ease-in-out;
+        font-size: 12px;
+      }
+      .all {
+        background: rgba(0, 0, 0, 0.13);
+        color: black;
+        &:hover {
+          background: rgba(0, 0, 0, 0.251);
+        }
+      }
+      .allx {
+        background: black;
+        color: white;
+      }
+      .beginner {
+        background: rgba(4, 235, 81, 0.253);
+        color: green;
+        &:hover {
+          background: rgba(4, 235, 81, 0.491);
+        }
+      }
+      .beginnerx {
+        background: green;
+        color: white;
+      }
+      .easy {
+        background: rgba(15, 168, 228, 0.167);
+        color: blue;
+        &:hover {
+          background: rgba(15, 168, 228, 0.386);
+        }
+      }
+      .easyx {
+        background: blue;
+        color: white;
+      }
+      .medium {
+        background: rgba(255, 255, 0, 0.221);
+        color: rgb(185, 121, 2);
+        &:hover {
+          background: rgba(255, 255, 0, 0.564);
+        }
+      }
+      .mediumx {
+        background: yellow;
+        color: black;
+      }
+      .hard {
+        background: rgba(255, 166, 0, 0.249);
+        color: rgb(244, 120, 3);
+        &:hover {
+          background: rgba(255, 166, 0, 0.525);
+        }
+      }
+      .hardx {
+        background: orange;
+        color: white;
+      }
+      .expert {
+        background: rgba(255, 0, 0, 0.228);
+        color: red;
+        &:hover {
+          background: rgba(255, 0, 0, 0.429);
+        }
+      }
+      .expertx {
+        background: red;
+        color: white;
+      }
+    }
+    .taskBlocks {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: start;
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .pogination {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100px;
+        height: 40px;
+        border: 2px solid black;
+        background: transparent;
+        border-radius: 5px;
+        color: black;
+        font-weight: 600;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          background: black;
+          color: white;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .Tasks {
+    .content {
+      .levels {
+        height: auto;
+        padding-block: 10px;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}

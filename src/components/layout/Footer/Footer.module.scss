@@ -1,0 +1,182 @@
+.Footer {
+  width: 100%;
+  height: 250px;
+  background: black;
+  margin-top: 50px;
+  padding: 20px;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding-top: 50px;
+    .nav {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      gap: 20px;
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        span {
+          width: 50px;
+          height: 50px;
+          background: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 25px;
+          color: black;
+          border-radius: 10px;
+        }
+        h1 {
+          font-size: 25px;
+        }
+      }
+      .message {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 5px;
+        h6 {
+          font-size: 15px;
+          width: 300px;
+          font-weight: 400;
+        }
+        .input {
+          width: 300px;
+          height: 40px;
+          background: white;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          input {
+            height: 90%;
+            width: 250px;
+            border: none;
+            padding-inline: 10px;
+            outline: none;
+            font-size: 16px;
+          }
+          button {
+            width: 50px;
+            height: 100%;
+            background: transparent;
+            font-size: 20px;
+            border-radius: 5px;
+            border: none;
+            transition: 0.3s ease-in-out;
+            &:hover {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+    .loader {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      background: #de3500;
+      transform: rotateX(65deg) rotate(45deg);
+      color: #fff;
+      animation: layers1 1s linear infinite alternate;
+    }
+    .loader:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.7);
+      animation: layerTr 1s linear infinite alternate;
+    }
+
+    @keyframes layers1 {
+      0% {
+        box-shadow: 0px 0px 0 0px;
+      }
+      90%,
+      100% {
+        box-shadow: 20px 20px 0 -4px;
+      }
+    }
+    @keyframes layerTr {
+      0% {
+        transform: translate(0, 0) scale(1);
+      }
+      100% {
+        transform: translate(-25px, -25px) scale(1);
+      }
+    }
+
+    .autors {
+      display: flex;
+      align-items: start;
+      flex-direction: column;
+      gap: 10px;
+      h3 {
+        font-size: 15px;
+        line-height: 25px;
+        color: rgb(165, 163, 163);
+        span {
+          font-weight: 400;
+          color: white;
+        }
+      }
+      .icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        span {
+          font-size: 20px;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .Footer {
+    height: auto;
+    .content {
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      gap: 50px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .Footer {
+    .content {
+      .nav {
+        .logo {
+          span {
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+            border-radius: 5px;
+          }
+          h1 {
+            font-size: 20px;
+          }
+        }
+        .message {
+          h6 {
+            font-size: 12px;
+          }
+          .input {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
