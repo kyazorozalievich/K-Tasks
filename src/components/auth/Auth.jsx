@@ -1,11 +1,12 @@
 import scss from "./Auth.module.scss";
-import { auth, provider } from "../../firebase";
+import { auth, googleProvider, githubProvider } from "../../firebase";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { CreateUserInFirestore } from "./CreateUserInFirestore";
 import { useContext } from "react";
 import { RootContext } from "../../context/RootContext";
 import { FcGoogle } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
 
 const Auth = () => {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ const Auth = () => {
     return navigate("/");
   }
 
-  const handleLogin = async () => {
+  const handleLogin = async (provider) => {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
@@ -31,11 +32,19 @@ const Auth = () => {
 
   return (
     <div className={scss.auth}>
-      <h2>Войти через Google</h2>
-      <button onClick={handleLogin}>
+      <h2>Войти через</h2>
+
+      <button onClick={() => handleLogin(googleProvider)}>
         Войти в Google{" "}
         <span>
           <FcGoogle />
+        </span>
+      </button>
+
+      <button onClick={() => handleLogin(githubProvider)}>
+        Войти через GitHub{" "}
+        <span>
+          <FaGithub />
         </span>
       </button>
     </div>

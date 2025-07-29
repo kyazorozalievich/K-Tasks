@@ -32,3 +32,9 @@ textarea {
   margin: 0 auto;
   padding-inline: 40px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 20px;
+  }
+}
